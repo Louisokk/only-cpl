@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Login from './Components/Login/Login';
+import Panel from "./Components/Panel/Panel"
+import { useState } from 'react';
+import classNames from 'classnames';
 
 function App() {
+
+  const [data, setData] = useState({})
+  const [loggedIn, setLoggedIn] = useState(false)
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classNames({
+      "App": true,
+      "App--loggedIn": loggedIn
+    })}>
+      {loggedIn=== false && (<Login setData={setData} setLoggedIn = {setLoggedIn}></Login>)}
+
+      {loggedIn === true && (
+        <Panel data={data} conversionFlow={data.conversionFlow}></Panel>
+      )}
     </div>
   );
 }

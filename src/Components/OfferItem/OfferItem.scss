@@ -1,0 +1,33 @@
+@import '../../styles/colors.scss';
+
+.offer-item {
+    width: calc(100% - 2em);
+    height: calc(25% - 2em);
+    padding: 1em 1em;
+    color: white;
+    display: flex;
+    flex-direction: row;
+
+    cursor: pointer;
+
+    &__image {
+        height: 100%;
+        border-radius: 10px;
+        margin-right: 1em;
+    }
+
+    &__information {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &-name {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 1em;
+        }
+        &-text {
+            margin-bottom: .5em;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@import '../../styles/colors.scss';
+
+.panel {
+    background-color: rgb(5, 15, 41);
+    width: 100%;
+    height: 100vh;
+    max-width: 1920px;
+    margin: 0 auto;
+
+    &__head {
+        width: 100%;
+        height: 150px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+
+        &-menu {
+            height: 50%;
+            width: fit-content;
+            background-color: transparent;
+            border: 0;
+            cursor: pointer;
+        }
+    }
+    &__body {
+        height: calc(100vh - 150px);
+        position: relative;
+    }
+}
+.panel-logo {
+height: 100%;
+}
+.menu-image {
+    height:100%;
+}

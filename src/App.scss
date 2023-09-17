@@ -1,0 +1,14 @@
+@import 'styles/colors.scss';
+
+.App {
+  background-color: $blue6;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  &--loggedIn {
+    background-color: rgb(5, 15, 41);
+  }
+}
+
+
